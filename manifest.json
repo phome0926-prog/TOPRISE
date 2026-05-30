@@ -1,0 +1,17 @@
+{
+  "name": "TOPRISE 営業資料",
+  "short_name": "TOPRISE",
+  "description": "株式会社トップライズ 営業資料アプリ。会社紹介・4機材シート・現場提案カード。",
+  "lang": "ja",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0c1a26",
+  "theme_color": "#0c1a26",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}
