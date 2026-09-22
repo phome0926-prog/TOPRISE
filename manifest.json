@@ -1,7 +1,7 @@
 {
   "name": "TOPRISE 営業資料",
   "short_name": "TOPRISE",
-  "description": "株式会社トップライズ 営業資料アプリ。会社紹介・4機材シート・現場提案カード。",
+  "description": "株式会社トップライズ 営業資料アプリ。手法選定アドバイザー・会社紹介・3機材シート・現場提案カード。",
   "lang": "ja",
   "start_url": "./index.html",
   "scope": "./",

@@ -9,19 +9,29 @@
 toprise-app/
 ├── index.html                  ← 目次画面（PWAのトップ）
 ├── manifest.json               ← アプリ宣言（名前・アイコン・テーマ色）
-├── service-worker.js           ← オフラインキャッシュ
+├── service-worker.js           ← オフラインキャッシュ（CACHE_VERSION はここ）
 ├── icons/
 │   ├── icon-192.png
 │   ├── icon-512.png
 │   └── apple-touch-icon.png    ← iOS ホーム画面アイコン
+├── toprise_advisor.html        ← 手法選定アドバイザー（商談用・タップで推奨手法を提案）
 ├── toprise_company.html        ← 会社紹介
 ├── toprise_field_cards.html    ← 現場提案カード（iPad現場用）
 ├── toprise_sheet_p40.html      ← Leica P40 機材シート
 ├── toprise_sheet_navvis.html   ← NavVis VLX 機材シート
-├── toprise_sheet_uav.html      ← DJI Matrice 300 RTK 機材シート
-├── toprise_sheet_proscan.html  ← ProScan 機材シート
+├── toprise_sheet_uav.html      ← DJI Matrice 350 RTK 機材シート
+├── toprise_sheet_proscan.html  ← ProScan 機材シート（※導線からは外しています。将来復活用に保管）
 └── README.md                   ← このファイル
 ```
+
+## 1-1. 画面の構成
+
+目次（index.html）から次の画面に飛べます：
+
+- **手法選定アドバイザー** … 商談の主役。お客様の現場条件をタップで選ぶと「この手法がベスト」＋理由＋見積りの手間の所在を提示。手法から／成果物からの逆引きも可。
+- **会社紹介** … 元請ゼネコン向け。3D計測（3手法）・BIM/CIM・ドローン・災害・沿革・会社概要。
+- **現場提案カード** … 要望をタップすると技術ポイント・手法・機材・精度・成果物・納期が1画面で出る。
+- **機材シート（3手法）** … Leica P40／NavVis VLX／DJI Matrice 350 RTK。
 
 ## 2. PWA が動く条件
 
@@ -70,13 +80,21 @@ HTTPS であることだけ確認してください。
 新しい内容を反映するには、`service-worker.js` の冒頭にある以下の行を変更してください：
 
 ```javascript
-const CACHE_VERSION = "toprise-v1";   //  ← v2, v3 … と数字を上げる
+const CACHE_VERSION = "toprise-v9";   //  ← 更新のたびに v10, v11 … と数字を上げる
 ```
 
-`v1` → `v2` のように上げてからアップロードすると、次にオンラインで開いたとき
+数字を1つ上げてからアップロードすると、次にオンラインで開いたとき
 古いキャッシュが破棄され、最新のファイルが再キャッシュされます。
+（現在のバージョンは **v9** です。次に更新するときは v10 にしてください）
 
 > 簡単ルール：**資料を1回でも触ったら、必ず CACHE_VERSION の数字を1つ上げる**
+
+## 4-1. 更新履歴（抜粋）
+
+- **v7**（2026-09-09）打合せ反映：配色をトップライズブルーに統一／概算金額の表示を廃止／「作業コスト」表記に変更／全画面に「トップに戻る」／アドバイザーに「PDFで保存」「結果リンクのコピー」（リンクを開くと同じ結果を再現）／ゴール別の成果物イメージを追加／営業所「加茂」に修正
+- **v6** manifest・README を最新構成に更新
+- **v5** ProScan を本文からも削除し3手法に統一
+- **v4** 売上高16.9億円・従業員令和8年・トップライズ関東・福岡営業所・Matrice 350・ProScan導線削除
 
 ## 5. うまく動かないとき
 
