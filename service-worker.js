@@ -2,7 +2,7 @@
 // 資料を更新したら CACHE_VERSION を v2, v3 ... と上げてください。
 // バージョンを上げると、次回オンライン起動時に古いキャッシュが破棄され、新しいファイルがキャッシュされます。
 
-const CACHE_VERSION = "toprise-v10";
+const CACHE_VERSION = "toprise-v11";
 
 const PRECACHE_URLS = [
   "./",
@@ -17,7 +17,8 @@ const PRECACHE_URLS = [
   "./toprise_sheet_uav.html",
   "./toprise_sheet_proscan.html",
   "./toprise_advisor.html",
-  "./toprise_field_cards.html"
+  "./toprise_field_cards.html",
+  "./toprise_guide.html"
 ];
 
 // install: 全ファイルをプリキャッシュ

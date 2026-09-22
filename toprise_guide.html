@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="theme-color" content="#0c1a26">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="TOPRISE">
+<title>使い方｜TOPRISE 営業資料アプリ</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Shippori+Mincho:wght@700;800&family=Barlow+Condensed:wght@600;700&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--ink:#0c1a26;--ink2:#1d3346;--paper:#f4f1ea;--paper2:#eae5da;--line:#c9c2b3;--accent:#2e5497;--accent2:#62a4d8;--warn:#e4572e}
+body{font-family:'Zen Kaku Gothic New',sans-serif;background:var(--paper);color:var(--ink);line-height:1.85;-webkit-font-smoothing:antialiased}
+.wrap{max-width:860px;margin:0 auto;padding:0 22px 60px}
+.top{background:linear-gradient(135deg,#0c1a26,#1d3a7a);color:#f4f1ea;padding:22px 0}
+.top .wrap{padding-top:0;padding-bottom:0;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.brand{font-family:'Barlow Condensed',sans-serif;letter-spacing:.18em;font-weight:700;font-size:1.2rem}
+.brand b{color:var(--accent2)}
+.home{font-size:.86rem;font-weight:800;color:#fff;text-decoration:none;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.3);padding:8px 14px;border-radius:10px;white-space:nowrap}
+h1{font-family:'Shippori Mincho',serif;font-size:1.9rem;font-weight:800;line-height:1.35;margin:34px 0 8px}
+.lead{color:var(--ink2);font-size:.98rem;margin-bottom:26px}
+h2{font-family:'Shippori Mincho',serif;font-size:1.3rem;font-weight:800;margin:38px 0 12px;padding-left:14px;border-left:5px solid var(--accent2);display:flex;align-items:center;gap:10px}
+h2 .n{font-family:'Barlow Condensed',sans-serif;color:var(--accent);font-size:1rem;letter-spacing:.1em}
+h3{font-size:1.02rem;font-weight:800;margin:20px 0 6px;color:var(--accent)}
+p{margin-bottom:10px}
+ol,ul{margin:6px 0 12px 22px}
+li{margin-bottom:5px}
+b{font-weight:800}
+.box{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin:12px 0}
+.box.warn{background:#fff5ee;border-color:#e6a880}
+.box.warn b{color:#8a3b12}
+.box.tip{background:#eef4fb;border-color:#b9d3ee}
+.kv{display:grid;grid-template-columns:150px 1fr;gap:6px 14px;font-size:.95rem}
+.kv .k{font-weight:800;color:var(--accent)}
+.steps{counter-reset:s}
+.steps li{list-style:none;position:relative;padding-left:38px;margin-bottom:10px}
+.steps li::before{counter-increment:s;content:counter(s);position:absolute;left:0;top:2px;width:26px;height:26px;border-radius:50%;background:var(--accent);color:#fff;font-family:'Barlow Condensed',sans-serif;font-weight:700;display:grid;place-items:center;font-size:.9rem}
+table{width:100%;border-collapse:collapse;font-size:.92rem;background:#fff;border-radius:12px;overflow:hidden;margin:10px 0}
+th,td{padding:10px 12px;border-bottom:1px solid var(--paper2);text-align:left;vertical-align:top}
+th{background:var(--ink);color:#f4f1ea;font-weight:700;font-size:.85rem}
+.url{font-family:'Barlow Condensed',sans-serif;font-size:1.1rem;color:var(--accent);word-break:break-all}
+.small{font-size:.82rem;color:#6c7681}
+.foot{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);font-size:.82rem;color:#6c7681}
+@media print{
+  body{background:#fff}
+  .top{background:#0c1a26!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .home{display:none}
+  .box,table,h2{break-inside:avoid}
+  h2{break-after:avoid}
+  .wrap{max-width:none;padding:0 6mm 10mm}
+  @page{size:A4;margin:14mm 12mm}
+}
+</style>
+</head>
+<body>
+<div class="top"><div class="wrap">
+  <div class="brand">TOP<b>RISE</b> <span style="font-weight:400;letter-spacing:.06em;font-size:.8rem;opacity:.75">営業資料アプリ</span></div>
+  <a class="home" href="index.html">⌂ トップに戻る</a>
+</div></div>
+
+<div class="wrap">
+  <h1>営業資料アプリ 使い方</h1>
+  <p class="lead">商談で「お客様の現場にはこの手法がベスト」をその場で示すためのiPadアプリです。会社紹介・機材シート・現場提案カード・手法選定アドバイザーが1つに入っています。ホーム画面に追加すれば、電波のない現場でも開けます。</p>
+
+  <h2><span class="n">01</span>iPadにインストールする（初回だけ）</h2>
+  <div class="box">
+    <div class="kv">
+      <div class="k">アプリのURL</div><div class="url">https://phome0926-prog.github.io/TOPRISE/</div>
+      <div class="k">対応ブラウザ</div><div>Safari（iPadに最初から入っているもの）。Chromeでは「ホーム画面に追加」が出ません。</div>
+    </div>
+  </div>
+  <ol class="steps">
+    <li>Safariで上のURLを開く（Wi-Fiかモバイル通信がつながる場所で）</li>
+    <li>画面の<b>共有ボタン</b>（四角に上矢印のアイコン）をタップ</li>
+    <li>メニューを下にスクロールして<b>「ホーム画面に追加」</b>をタップ</li>
+    <li>名前が「TOPRISE」になっているのを確認して<b>「追加」</b></li>
+    <li>ホーム画面にTOPRISEのロゴのアイコンが出ます。以後はこのアイコンから起動します</li>
+  </ol>
+  <div class="box tip"><b>ポイント：</b>初回はネットにつながった状態で一度開いてください。その後は機内モードや電波のない現場でも開けます。</div>
+
+  <h2><span class="n">02</span>画面の構成</h2>
+  <p>トップ画面（目次）から次の画面に入ります。どの画面にも左上または右上に「⌂ トップに戻る」があります。</p>
+  <table>
+    <tr><th style="width:190px">画面</th><th>何に使うか</th></tr>
+    <tr><td><b>手法選定アドバイザー</b></td><td>商談の主役。お客様の現場条件をタップで選ぶと、推奨手法・理由・作業コスト（どの工程に手間がかかるか）・成果物イメージが出ます。</td></tr>
+    <tr><td><b>会社紹介</b></td><td>元請・発注者向けの会社説明。3D計測の3手法、BIM/CIM・4D、ドローン・災害、選ばれる理由、沿革、会社概要。</td></tr>
+    <tr><td><b>現場提案カード</b></td><td>「供用中で止められない」「出来形を管理したい」など、お客様の要望から引くカード。技術ポイント・対応手法・機材・精度・成果物・納期が1画面で出ます。</td></tr>
+    <tr><td><b>機材シート（3枚）</b></td><td>Leica P40／NavVis VLX／DJI Matrice 350 の1枚もの。「その機材、どんなもの?」と聞かれたときに。</td></tr>
+  </table>
+
+  <h2><span class="n">03</span>手法選定アドバイザーの使い方</h2>
+  <p>画面上の3つのタブで入り口を選べます。お客様の話の出方に合わせて使い分けてください。</p>
+
+  <h3>A. 提案フロー（基本の使い方）</h3>
+  <ol class="steps">
+    <li><b>STEP 1｜何を3Dにしたいか</b>… 地形・広域／構造物／道路・線形／屋内・狭所 から選ぶ</li>
+    <li><b>STEP 2｜現場の制約</b>… 上空を飛ばせるか／供用中で止められるか／必要な精度／立入・足場 を順に答える</li>
+    <li><b>STEP 2.5｜作業コストに効く条件</b>… 広さ／基準点の有無／納期。手法は変わらず、結果の「確認事項」に反映されます</li>
+    <li><b>STEP 3｜最終的に何が欲しいか</b>… 現況把握／干渉チェック／施工手順（4D）／出来形・土量／図面化</li>
+    <li><b>「結果を見る」</b>をタップ → 推奨手法・理由・作業コスト・成果物イメージが表示されます</li>
+  </ol>
+  <div class="box tip"><b>わかっている項目だけ選んでもOK。</b>未選択のまま「次へ」で進めます。商談の流れを止めないことを優先してください。</div>
+
+  <h3>B. 手法から逆引き</h3>
+  <p>お客様が「NavVisって何ができるの?」のように機材名を出したとき。機材をタップすると、向いている対象と機材シートへのリンクが出ます。</p>
+
+  <h3>C. 成果物から逆引き</h3>
+  <p>「干渉チェックがしたい」「出来形の書類が欲しい」のように、欲しいものが先に決まっているとき。成果物をタップすると、必要な進め方と作業コストが出ます。</p>
+
+  <h3>結果画面の見方</h3>
+  <ul>
+    <li><b>RECOMMENDATION</b>… 推奨手法。複数出たときは組み合わせて対応する、という意味です</li>
+    <li><b>WHY</b>… なぜその手法か。ここをそのまま読めば説明になります</li>
+    <li><b>WORK COST（作業コスト）</b>… 現場測量／点群処理・解析／3Dモデリング／図面整合 の4工程で、どこに手間がかかるかをバーで表示。<b>金額は出ません</b>（現場条件で大きく変わるため）</li>
+    <li><b>オレンジの「確認事項」</b>… <b>お客様に聞くべき条件</b>です（作業を止められるか、時間帯、交通量など）。見積りに影響するので、この場で確認してください</li>
+    <li><b>DELIVERABLE</b>… 成果物のイメージ画像。「こういうものが納品されます」を見せる用</li>
+  </ul>
+
+  <h3>結果を残す</h3>
+  <ul>
+    <li><b>📄 PDFで保存</b>… 印刷画面が開くので「PDFとして保存」または「共有」でファイルにできます。お客様に渡す・社内に共有する用</li>
+    <li><b>🔗 この結果のリンクをコピー</b>… リンクをメモやメールに貼っておくと、後で開いたとき<b>同じ結果が再現</b>されます。事務所で見積りを作るときに便利です</li>
+    <li><b>← ゴールを変える</b>… 選んだ条件はそのままに、成果物だけ変えて比較できます</li>
+  </ul>
+
+  <h2><span class="n">04</span>商談の前後でやること（録音と共有）</h2>
+  <p>このアプリを育てるために、<b>うまく説明できなかった場面</b>を集めています。成功事例は要りません。「聞かれて答えられなかった」「ここで詰まった」を送ってください。</p>
+  <div class="box warn">
+    <b>商談の前</b>：iPad（またはiPhone）標準の<b>「ボイスメモ」</b>で録音を開始してから、このアプリを開く。ボイスメモは裏で録り続けるので、アプリを操作しながらで大丈夫です。トップ画面のオレンジのバナーが、その確認用です。
+  </div>
+  <ol class="steps">
+    <li>商談前：ボイスメモで録音開始 → TOPRISEアプリを開く</li>
+    <li>商談中：アドバイザーをお客様と一緒にタップ。結果はPDF保存かリンクコピーで残す</li>
+    <li>商談後：録音を止め、<b>うまく説明できなかった箇所</b>だけでよいので文字起こし（ボイスメモの文字起こし機能、または手入力）</li>
+    <li>その文字起こしと、あれば結果のリンクを、下記の連絡先へ送る</li>
+  </ol>
+  <p class="small">送っていただいた内容をもとに修正版を作ってお戻しします。打合せは不要です。反映されると、次にアプリをネットにつないで開いたときに自動で新しくなります（営業側で更新作業は要りません）。</p>
+
+  <h2><span class="n">05</span>困ったとき</h2>
+  <table>
+    <tr><th style="width:230px">症状</th><th>対処</th></tr>
+    <tr><td>古い内容が表示される</td><td>ネットにつながる場所でアプリを一度閉じて開き直す。それでも変わらなければ2回ほど繰り返す</td></tr>
+    <tr><td>アプリが開かない・真っ白</td><td>Safariで上のURLを直接開く。普通のWebページとして同じ内容が見られます</td></tr>
+    <tr><td>アイコンが古いまま／灰色</td><td>ホーム画面のアイコンを長押しで削除し、01の手順で「ホーム画面に追加」をやり直す</td></tr>
+    <tr><td>電波のない場所で開けない</td><td>初回にネットにつないだ状態で開いていない可能性。一度オンラインで開いてから現場へ</td></tr>
+    <tr><td>PDF保存の画面が出ない</td><td>結果画面の「PDFで保存」をタップ後、右上の共有アイコンから「PDFとして保存」を選ぶ</td></tr>
+  </table>
+  <div class="box tip"><b>長く開かないと：</b>数週間まったく開かないと、iPadがオフライン用の保存データを消すことがあります。その場合は一度ネットにつないで開き直せば元に戻ります。</div>
+
+  <h2><span class="n">06</span>連絡先</h2>
+  <div class="box">
+    <div class="kv">
+      <div class="k">アプリの修正・要望</div><div>溝口洋輔（Unnameable Lab）　［メール・電話を記入］</div>
+      <div class="k">送るもの</div><div>うまく説明できなかった場面の文字起こし／結果のリンク／気づいた点（何でも）</div>
+    </div>
+  </div>
+
+  <div class="foot">TOPRISE 営業資料アプリ 使い方（v11）　2026年9月　作成：溝口洋輔</div>
+</div>
+<script>
+if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('service-worker.js').catch(function(){});});}
+</script>
+</body>
+</html>
