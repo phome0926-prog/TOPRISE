@@ -2,7 +2,7 @@
 // 資料を更新したら CACHE_VERSION を v2, v3 ... と上げてください。
 // バージョンを上げると、次回オンライン起動時に古いキャッシュが破棄され、新しいファイルがキャッシュされます。
 
-const CACHE_VERSION = "toprise-v11";
+const CACHE_VERSION = "toprise-v15";
 
 const PRECACHE_URLS = [
   "./",
