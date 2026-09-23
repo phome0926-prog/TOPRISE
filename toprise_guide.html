@@ -69,7 +69,7 @@ th{background:var(--ink);color:#f4f1ea;font-weight:700;font-size:.85rem}
   <h2><span class="n">01</span>iPadにインストールする（初回だけ）</h2>
   <div class="box">
     <div class="kv">
-      <div class="k">アプリのURL</div><div class="url">https://phome0926-prog.github.io/TOPRISE/</div>
+      <div class="k">アプリのURL</div><div class="url" id="appurl">https://phome0926-prog.github.io/TOPRISE/</div>
       <div class="k">対応ブラウザ</div><div>Safari（iPadに最初から入っているもの）。Chromeでは「ホーム画面に追加」が出ません。</div>
     </div>
   </div>
@@ -153,6 +153,15 @@ th{background:var(--ink);color:#f4f1ea;font-weight:700;font-size:.85rem}
 
   <div class="foot">TOPRISE 営業資料アプリ 使い方　2026年9月</div>
 </div>
+<script>
+// 公開先（github.io 等）で開かれている場合は、その実際のURLを表示する
+(function(){try{
+  if(location.protocol.indexOf("http")===0 && location.hostname && location.hostname!=="localhost"){
+    var base=location.origin+location.pathname.replace(/[^\/]*$/,"");
+    var el=document.getElementById("appurl"); if(el) el.textContent=base;
+  }
+}catch(e){}})();
+</script>
 <script>
 if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('service-worker.js').catch(function(){});});}
 </script>
